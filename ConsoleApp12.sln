@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sand_Clock_Visual", "ConsoleApp12\Sand_Clock_Visual.csproj", "{B4BDEE71-541D-4A38-8141-1A998F55BB2C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4BDEE71-541D-4A38-8141-1A998F55BB2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4BDEE71-541D-4A38-8141-1A998F55BB2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4BDEE71-541D-4A38-8141-1A998F55BB2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4BDEE71-541D-4A38-8141-1A998F55BB2C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D568F6C2-20F7-45DD-8C99-CF9D05E08B44}
+	EndGlobalSection
+EndGlobal
