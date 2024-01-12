@@ -56,7 +56,6 @@ class SandClock
                 Console.Clear();
                 Console.ForegroundColor = ConsoleColor.Blue; // Set color to gray
 
-                Console.WriteLine(timePassed);
                 int halfTime = totalTime / 2;
                 int size = 5; // Total height of each half of the sand clock
                 int consoleWidth = Console.WindowWidth;
