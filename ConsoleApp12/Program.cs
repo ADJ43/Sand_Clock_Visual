@@ -16,13 +16,16 @@ class SandClock
         {
             static Timer timer;
             static int timePassed = 0;
-            static int totalTime = 7; // Total time in seconds for the timer
+            static int totalTime = 15; // Total time in seconds for the timer
+            static int lapse = 0;
+            static int lapseInput = 0;
 
             static void Main(string[] args)
             {
                 Console.WriteLine("Enter timer in seconds. Only integers please :)");
                 string input = Console.ReadLine();
-                totalTime = int.Parse(input);
+                lapseInput = int.Parse(input);
+
                 SetupTimer();
                 Console.ReadKey(); // Wait for user input to exit
 
@@ -30,7 +33,8 @@ class SandClock
 
             static void SetupTimer()
             {
-                timer = new Timer(1000); // Set up the timer for 1-second intervals
+                lapse = lapseInput;
+                timer = new Timer(lapse * 1000 / 15); // Set up the timer for 1-second intervals
                 timer.Elapsed += OnTimedEvent;
                 timer.AutoReset = true;
                 timer.Enabled = true;
@@ -53,10 +57,10 @@ class SandClock
                 Console.ForegroundColor = ConsoleColor.Gray; // Set color to gray
 
                 int halfTime = totalTime / 2;
-                int size = 4; // Total height of each half of the sand clock
+                int size = 5; // Total height of each half of the sand clock
                 int consoleWidth = Console.WindowWidth;
                 int clockWidth = size; // Maximum width of the sand clock
-                int leftPadding = (consoleWidth - clockWidth) / 2; // Calculate left padding for centering
+                int leftPadding = (consoleWidth - clockWidth + 1) / 2; // Calculate left padding for centering
 
                 // Calculate how many lines of sand should be in each half
                 int sandTop = size - Math.Min(halfTime, timePassed);
@@ -68,7 +72,7 @@ class SandClock
                     Console.Write(new String(' ', leftPadding)); // Add left padding for centering
                     if (i < sandTop)
                     {
-                        Console.WriteLine(new String(' ', i) + new String('█', size - i));
+                        Console.WriteLine(new String(' ', i) + new String('█', size - i) + new String('█', size - i));
                     }
                     else
                     {
@@ -82,7 +86,7 @@ class SandClock
                     Console.Write(new String(' ', leftPadding)); // Add left padding for centering
                     if (i < sandBottom)
                     {
-                        Console.WriteLine(new String(' ', size - i - 1) + new String('█', i + 1));
+                        Console.WriteLine(new String(' ', size - i - 1) + new String('█', i + 1) + new String('█', i + 1));
                     }
                     else
                     {
